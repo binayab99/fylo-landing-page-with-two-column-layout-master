@@ -4,6 +4,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin-bottom: 8rem;
 
     .text {
       display: flex;
@@ -32,9 +33,26 @@
   }
 
   .hero-bottom {
-    padding: 8rem 4rem 8rem 4rem;
+    position: relative;
+    padding: 4rem 4rem 8rem 4rem;
     display: flex;
-    background-color: $lightGrayishBlue;
+    background-color: #f8f8fe;
+
+    .curved-image {
+      position: absolute;
+      top: -15%;
+      left: 0;
+      background: url(/images/bg-curve-desktop.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 100vh;
+      width: 100%;
+
+      // Fix for curve
+      @media (max-width: 1162px) {
+        top: -9%;
+      }
+    }
 
     .text {
       display: flex;
@@ -153,6 +171,13 @@
     .hero-bottom {
       flex-direction: column-reverse;
       padding: 8rem 2rem 8rem 2rem;
+
+      .curved-image {
+        background: url(/images/bg-curve-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        top: -5%;
+      }
 
       .text {
         margin-top: 3rem;
