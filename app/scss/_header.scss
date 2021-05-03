@@ -1,0 +1,36 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 5rem 4rem;
+
+  .logo {
+    display: flex;
+  }
+
+  nav {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+
+    a {
+      color: $desaturatedBlue;
+    }
+  }
+}
+
+// Mobile Design
+@media (max-width: 765px) {
+  header {
+    margin: 2rem 2rem;
+
+    .logo {
+      img {
+        width: 80px;
+      }
+    }
+
+    nav {
+      gap: 1.5rem;
+    }
+  }
+}

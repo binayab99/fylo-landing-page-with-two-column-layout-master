@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap");
+
+$veryDarkBlue: hsl(243, 87%, 12%);
+$desaturatedBlue: hsl(238, 22%, 44%);
+
+$brightBlue: hsl(224, 93%, 58%);
+$moderateCyan: hsl(170, 45%, 43%);
+
+$lightGrayishBlue: hsl(240, 75%, 98%);
+$lightGray: hsl(0, 0%, 75%);
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+.cta,
+nav {
+  font-family: "Raleway", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+  margin: 0;
+}
+
+.cta,
+nav {
+  font-weight: 400;
+}
+
+.cta {
+  background-color: $brightBlue;
+  color: white;
+  width: 12rem;
+  height: 2rem;
+  border-radius: 0.15rem;
+  border: none;
+  box-shadow: 1px 1px 1px 1px rgba(black, 0.2);
+
+  &:hover {
+    cursor: pointer;
+    filter: brightness(200%);
+  }
+}
+
+a {
+  text-decoration: none;
+  color: white;
+
+  &:hover {
+    color: $desaturatedBlue;
+  }
+}
+
+span {
+  color: white;
+}
+
+i {
+  color: white;
+  border-radius: 50%;
+  border: 1px solid white;
+  padding: 0.5rem;
+
+  &:hover {
+    cursor: pointer;
+    color: $brightBlue;
+    border: 1px solid $brightBlue;
+  }
+}
+
+form {
+  input {
+    height: 2rem;
+    width: 22rem;
+    padding-left: 1rem;
+    border-radius: 0.15rem;
+    border: 1px solid $desaturatedBlue;
+    box-shadow: 1px 1px 1px 1px rgba(black, 0.2);
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  > div {
+    position: relative;
+
+    > input[type="email"] {
+      &:invalid:not(:focus):not(:placeholder-shown) {
+        border: 1px solid red;
+      }
+
+      &:invalid:focus:not(:placeholder-shown) {
+        & ~ .requirements {
+          max-height: 200px;
+        }
+      }
+    }
+
+    .requirements {
+      max-height: 0;
+      transition: 0.28s;
+      overflow: hidden;
+      color: red;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+// Mobile Design
+@media (max-width: 765px) {
+  form {
+    input {
+      width: 19.55rem;
+      padding-left: 1rem;
+    }
+
+    .cta {
+      margin-top: 1rem;
+      width: 19.55rem;
+    }
+  }
+}

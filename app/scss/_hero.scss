@@ -1,0 +1,176 @@
+.container-hero {
+  .hero-top {
+    padding: 0 4rem 8rem 4rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .text {
+      display: flex;
+      flex-direction: column;
+      flex: 1.2;
+
+      h1 {
+        font-size: 2.5rem;
+        max-width: 38rem;
+      }
+
+      p {
+        max-width: 37rem;
+      }
+    }
+
+    .image {
+      display: flex;
+      flex: 1;
+      justify-content: flex-end;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .hero-bottom {
+    padding: 8rem 4rem 8rem 4rem;
+    display: flex;
+    background-color: $lightGrayishBlue;
+
+    .text {
+      display: flex;
+      flex-direction: column;
+      flex: 1.2;
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      > p {
+        color: $desaturatedBlue;
+        max-width: 38rem;
+        margin-bottom: 0;
+        font-size: 0.9rem;
+      }
+
+      a {
+        width: 166px;
+        border-bottom: 1px solid $moderateCyan;
+        color: $moderateCyan;
+        margin-top: 1rem;
+        font-size: 0.9rem;
+
+        &:hover {
+          filter: brightness(130%);
+        }
+      }
+
+      i {
+        color: $moderateCyan;
+        border: none;
+      }
+    }
+
+    .image {
+      display: flex;
+      flex: 1;
+      justify-content: flex-end;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .card {
+      background-color: white;
+      padding: 1.5rem;
+      margin: 2rem 0 0 0;
+      border-radius: 0.2rem;
+      width: 24rem;
+      box-shadow: 1px 1px 1px 1px rgba(black, 0.2);
+
+      .quote {
+        i {
+          padding: 0;
+          color: black;
+
+          &:hover {
+            cursor: default;
+          }
+        }
+      }
+
+      p {
+        margin-bottom: 1rem;
+        font-size: 0.8rem;
+      }
+
+      img {
+        display: inline-block;
+        border-radius: 50%;
+        width: 40px;
+      }
+
+      .info {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+
+        &-text {
+          display: flex;
+          flex-direction: column;
+
+          .name {
+            font-weight: 700;
+            font-size: 0.8rem;
+          }
+
+          .pos {
+            font-size: 0.6rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Mobile Design
+@media (max-width: 765px) {
+  .container-hero {
+    .hero-top {
+      flex-direction: column-reverse;
+      padding: 0 2rem 8em 2rem;
+
+      .text {
+        margin-top: 3rem;
+        text-align: center;
+
+        h1 {
+          font-size: 1.55rem;
+        }
+      }
+    }
+
+    .hero-bottom {
+      flex-direction: column-reverse;
+      padding: 8rem 2rem 8rem 2rem;
+
+      .text {
+        margin-top: 3rem;
+
+        h2 {
+          font-size: 1.1rem;
+          text-align: center;
+        }
+
+        a {
+          margin: 1rem auto 0 auto;
+        }
+      }
+
+      .card {
+        width: 19rem;
+        margin: 2rem auto 0 auto;
+      }
+    }
+  }
+}
